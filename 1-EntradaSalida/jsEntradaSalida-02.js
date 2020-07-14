@@ -3,6 +3,21 @@ Debemos lograr tomar un nombre con 'prompt'
 y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-	alert("ok");
+	var dato;
+
+	dato =	prompt("ingrese un dato");
+
+	alert(dato);
+
+
+
+
+	//nombre="Agustin";
+	//nombre=null;
+	//nombre=23;
+	//nombre=true;
+
+	//alert(nombre);
+
 }
 
