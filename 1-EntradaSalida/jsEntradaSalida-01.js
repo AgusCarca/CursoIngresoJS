@@ -10,5 +10,6 @@ function mostrar()
 	alert("Soy Agustín Carcacha");
 	confirm ("Desea continuar");
 	prompt("ingrese su nombre");
+	alert("preparese para la autodestruccion")
 }
 
