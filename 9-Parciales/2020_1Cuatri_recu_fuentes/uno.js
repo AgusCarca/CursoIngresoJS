@@ -8,7 +8,6 @@ function mostrar()
 	var flagJabon = 0;
 	var precioMayorJabon;
 	var precioMayorJabonCantidad;
-	var cantidadItemMasUnidades;
 	var precioMayorJabonFabricante;
 	var promedioMasUnidades;
 	var cantidadTotalBarbijo = 0;
@@ -24,6 +23,7 @@ function mostrar()
 		item=prompt("Por favor ingrese item");
 		while (!(item == "barbijo" || item == "jabon" || item == "alcohol")){
 			item=prompt("Por favor reingrese item");
+			
 		}
 
 		cantidad=parseInt(prompt("Por favor ingrese cantidad"));
@@ -41,7 +41,7 @@ function mostrar()
 			fabricante=prompt("Por favor reingrese fabricante ");
 		}
 		//-------------------------------------------------------------------------------
-		//a) Del más caro de los Barbijos, la cantidad de unidades y el fabricante
+		//a) Del más caro de los jabon, la cantidad de unidades y el fabricante
 		if (item == "jabon" && flagJabon == 0 || precio > precioMayorJabon){
 			precioMayorJabon =  precio;
 			precioMayorJabonCantidad = cantidad;
@@ -52,31 +52,29 @@ function mostrar()
 		//b) Del tipo de producto con mas unidades en total de la compra, el promedio por compra
 		switch(item){
 			case "alcohol":
-				acumuladorCantidadesAlcohol+=cantidadItemMasUnidades;
+				acumuladorCantidadesAlcohol+=cantidad;
 				break;
 			case "barbijo":
-				acumuladorCantidadesBarbijo+=cantidadItemMasUnidades;
+				acumuladorCantidadesBarbijo+=cantidad;
 				break;
 			case "jabon":
-				acumuladorCantidadesJabon+=cantidadItemMasUnidades;
+				acumuladorCantidadesJabon+=cantidad;
 				break;
 		}
 		if (acumuladorCantidadesAlcohol>acumuladorCantidadesBarbijo
 			&& acumuladorCantidadesAlcohol >acumuladorCantidadesJabon){
-				promedioMasUnidades=acumuladorCantidadesAlcohol;
+				promedioMasUnidades=acumuladorCantidadesAlcohol/5;
 
 			}else if (acumuladorCantidadesBarbijo>acumuladorCantidadesJabon) {
-				promedioMasUnidades=acumuladorCantidadesBarbijo;
+				promedioMasUnidades=acumuladorCantidadesBarbijo/5;
 
 			}else{
-				promedioMasUnidades=acumuladorCantidadesJabon;
+				promedioMasUnidades=acumuladorCantidadesJabon/5;
 
 			}
 
 		
-
-
-		//c) Cuántas unidades de jabones hay en total
+		//C	
 		if (item == "barbijo"){
 			cantidadTotalBarbijo = cantidadTotalBarbijo + cantidad;
 		}
