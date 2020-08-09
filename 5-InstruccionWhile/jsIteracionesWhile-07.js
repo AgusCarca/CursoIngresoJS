@@ -11,9 +11,8 @@ function mostrar()
 
 	contador=0;
 	acumulador=0;
-	respuesta=true;
-
-	while (respuesta){
+	
+	do{
 		numero = prompt("Ingrese un numero");
 		numero = parseInt (numero);
 
@@ -23,12 +22,12 @@ function mostrar()
 
 		}
 
-		acumulador+=numero;
+		acumulador=acumulador+numero;
 		contador++;
-
+		
 
 		respuesta = confirm ("Desea continuar?");
-	}
+	} while(respuesta==true);
 
 
 	txtIdSuma.value=acumulador;

@@ -7,19 +7,32 @@ function mostrar()
 	var maximo;
 	var minimo;
 	var numero;
-	var primeraVez
+	var primeraVez;
 	
-	respuesta=true;
-	primeraVez=true
+	//respuesta=true;
+	primeraVez=0
 
-	while (respuesta){
-		do {
-			numero=prompt("Ingrese un numero");
-			numero = parseInt(numero);
+	do {
+		numero=prompt("Ingrese un numero");
+		numero = parseInt(numero);
 
-		} while(isNaN(numero));
+		if (primeraVez == 0 ){
+			maximo=numero;
+			minimo=numero;
 
-		if (primeraVez){
+			primeraVez = 1;
+
+		} 
+		if(numero > maximo) {
+			maximo = numero;
+
+		} else if ( numero < minimo){
+			minimo = numero;
+		}
+
+		/*} while(isNaN(numero));*/
+
+	/*	if (primeraVez){
 			primeraVez=false;
 
 			maximo = numero;
@@ -31,14 +44,15 @@ function mostrar()
 			if (numero<minimo){
 				minimo=numero;
 			}
-		}
+		}*/
 
 		respuesta=confirm("Desea continuar?");
 
 		
 
 
-	}
+	} while (respuesta==true);
+
 	txtIdMaximo.value=maximo
 	txtIdMinimo.value=minimo
 

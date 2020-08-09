@@ -68,7 +68,15 @@ function mostrar()
 		}
 		diferencia = sumaPositivos - sumaNegativos;
 
-		document.write("</br>La suma números de negativos es : "+sumaNegativos+ ".</br>La suma de números positivos es: "+sumaPositivos+".</br>La cantidad de números positivos es: "+contadorPositivos+".</br>La cantidad de números negativos es: "+contadorNegativos+".</br>La cantidad de ceros es: "+contadorCeros+".</br>La cantidad de números pares es: "+contadorPares+". </br>El promedio de los positivos es: "+promedioPositivos+".</br>El promedio de los negativos es: "+promedioNegativos+"</br>La diferencia entre positivos y negativos es: "+diferencia+".");
+		document.write("</br>La suma números de negativos es : "+sumaNegativos+ 
+		"</br>La suma de números positivos es: "+sumaPositivos+
+		"</br>La cantidad de números positivos es: "+contadorPositivos+
+		"</br>La cantidad de números negativos es: "+contadorNegativos+
+		"</br>La cantidad de ceros es: "+contadorCeros+
+		"</br>La cantidad de números pares es: "+contadorPares+
+		"</br>El promedio de los positivos es: "+promedioPositivos+
+		"</br>El promedio de los negativos es: "+promedioNegativos+
+		"</br>La diferencia entre positivos y negativos es: "+diferencia);
 	
 
 	
