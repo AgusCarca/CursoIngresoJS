@@ -12,7 +12,7 @@ hasta que el usuario quiera, mostrar:
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 function mostrar()
 {
-	//declarar contadores y variables 
+	/*declarar contadores y variables 
 	var respuesta;
 	var numeroIngresado;
 	var sumaNegativos=0;
@@ -77,11 +77,68 @@ function mostrar()
 		"</br>El promedio de los positivos es: "+promedioPositivos+
 		"</br>El promedio de los negativos es: "+promedioNegativos+
 		"</br>La diferencia entre positivos y negativos es: "+diferencia);
-	
+		*/
+		
+		var numero;
+		var respuesta;
+		var contadorPositivos=0;
+		var contadorNegativos=0;
+		var contadorCeros=0;
+		var contadorPares=0;
+		var acumuladorPositivos=0;
+		var acumuladorNegativos=0;
+		var promedioPositivos;
+		var promedioNegativos;
+		var diferencia;
 
-	
+		do{
+
+			numero=prompt("Ingrese un numero?");
+			numero=parseInt(numero);
+
+			/*while (isNaN(numero)){
+				numero=prompt("Ingrese un numero?");
+				numero=parseInt(numero);
+			}*/
+
+			if (numero<0){
+				acumuladorNegativos=acumuladorNegativos+numero;
+				contadorNegativos++;
+			} else if(numero ==0){
+				contadorCeros++;
+			} else{
+				acumuladorPositivos=acumuladorPositivos+numero;
+				contadorPositivos++;
+			}
+
+			if (numero%2==0){
+				contadorPares++
+			}
 
 
+
+
+
+
+			respuesta = confirm("desea continuar?");
+		} while (respuesta==true);
+
+		promedioPositivos = acumuladorPositivos / contadorPositivos;
+		promedioNegativos = acumuladorNegativos / contadorNegativos;
+
+
+		diferencia = contadorPositivos - contadorNegativos;
+
+		
+		console.log ("La suma de los negativos es: "+acumuladorNegativos);
+		console.log ("La suma de los positivos es: "+acumuladorPositivos);
+		console.log ("La cantidad de positivos es: "+contadorPositivos);
+		console.log ("La cantidad de los negativos: "+contadorNegativos);
+		console.log ("La cantidad de ceros es: "+contadorCeros);
+		console.log ("La cantidad de numeros pares es : "+contadorPares);
+		console.log ("El promedio de positivos es: "+promedioPositivos);
+		console.log ("El promedio de negativos es: "+promedioNegativos);
+		console.log ("La diferencia entre positivos y negativos es: "+diferencia);
 
 	
 
